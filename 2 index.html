@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        function formula(){
+            var x = document.getElementById("X").value;
+            var n = document.getElementById("N").value;
+            var inter = 0;
+            var answer = 0;
+
+            for(var i = 1; i <= n; i++){
+                inter = ((2 * i - 1) * (x**(2*i+1)))/((2 * i) * (2*i+1));
+                answer += inter;
+            }
+
+            alert("ответ " + answer);
+        }
+    </script>
+
+    X
+    <input type="text" id="X">
+    N
+    <input type="text" id="N">
+    <button onclick="formula()">Посчитать</button>
+</body>
+</html>
